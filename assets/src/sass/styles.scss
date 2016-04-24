@@ -21,6 +21,7 @@ $c-baseLight  : lighten($c-baseNormal, 20);
 @import "vendor/normalize";
 @import "helpers/mixins";
 @import "helpers/classes";
+@import "helpers/tables";
 
 /*
  | -----------------------------------------------------------------------------
@@ -125,8 +126,7 @@ a {
   text-align: center;
 
   .sidebar-header {
-    background-position: 50% 50%;
-    background-size: cover;
+    background-color: #f65958;
     margin-bottom: 70px;
     position: relative;
     height: 100px;
@@ -145,7 +145,6 @@ a {
 
     img {
       display: block;
-      border: 2px solid $c-white;
       @include border-radius(40px);
     }
   }

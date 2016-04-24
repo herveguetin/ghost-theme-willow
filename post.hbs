@@ -3,16 +3,20 @@
     <div class="post-single {{post_class}}">
         <div class="post-header">
             <h1>{{title}}</h1>
-            {{> "post-single-meta"}}
+            {{^is "page"}}
+                {{> "post-single-meta"}}
+            {{/is}}
         </div>
 
         <div class="post-content">
             {{content}}
         </div>
 
-        <div class="post-footer">
-            {{> "post-single-meta"}}
-        </div>
+        {{^is "page"}}
+            <div class="post-footer">
+                {{> "post-single-meta"}}
+            </div>
+        {{/is}}
     </div>
 
     <div id="disqus_thread"></div>

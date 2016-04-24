@@ -8,7 +8,7 @@
     <div id="wrapper" class="wrapper">
         <div id="viewport" class="viewport">
             <div id="sidebar" class="sidebar">
-                <div class="sidebar-header" style="background-image: url({{@blog.cover}})">
+                <div class="sidebar-header">
                     <a href="{{@blog.url}}" title="{{@blog.title}}">
                         <img src="{{@blog.logo}}" alt="{{@blog.title}}">
                     </a>
@@ -39,6 +39,7 @@
     </div>
 
     <script type="text/javascript" src="{{asset "js/script.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/prism.js"}}"></script>
     {{ghost_foot}}
 </body>
 </html>
