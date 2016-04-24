@@ -13,6 +13,8 @@ $c-grayNormal : #f7f7f7;
 $c-grayDark   : darken($c-grayNormal, 5);
 $c-baseLight  : lighten($c-baseNormal, 20);
 
+$c-red        : #f65958;
+
 /*
  | -----------------------------------------------------------------------------
  | Imports
@@ -126,7 +128,7 @@ a {
   text-align: center;
 
   .sidebar-header {
-    background-color: #f65958;
+    background-color: $c-red;
     margin-bottom: 70px;
     position: relative;
     height: 100px;
@@ -263,7 +265,7 @@ a {
       line-height: 1.4em;
       margin-bottom: 10px;
     }
-
+/*
     @media (min-width: 1200px) {
       @include post3Col();
     }
@@ -274,7 +276,7 @@ a {
 
     @media (max-width: 1199px) and (min-width: 880px) {
       @include post2Col();
-    }
+    }*/
   }
 
   /*
@@ -370,6 +372,19 @@ a {
         &:hover {
           color: $c-baseLight;
         }
+      }
+    }
+  }
+
+  .post-excerpt {
+    @extend .post-meta;
+    color: $c-baseNormal;
+    margin-top: 1.5em;
+
+    .read-more {
+      color: $c-red;
+      &:before {
+        content: "... Learn ";
       }
     }
   }
